@@ -1,0 +1,47 @@
+prpblem1 
+Una, nag-import ko og Scanner para makahatag og input ang user.
+Sunod, naghimo ko og method nga gitawag og sumOfDigits() nga modawat og integer nga parameter nga gitawag og number.
+Sulod sa method, naa tay base case. Gigamit nako ang if (number == 0). Pasabot ani, kung ang number mahimong zero, mo-return og zero ang method. Mao ni ang condition nga mopahunong sa recursion.
+Sunod, naa tay recursive case:
+return (number % 10) + sumOfDigits(number / 10);
+Dinhi, ang % 10 kay gigamit para makuha ang last digit sa number, samtang ang / 10 kay para matangtang ang last digit.
+Padayon ni siya og balik-balik hangtod mahurot ang digits sa number. Human ana, i-add niya ang tanang digits ug i-display ang total."
+
+problem 2
+
+Una, nag-import ko og Scanner para makasulod ang user og duha ka numbers.
+Sunod, naghimo ko og method nga gitawag og gcd() nga naay duha ka parameters, ang a ug b.
+Gigamit nako ang Euclidean Algorithm para makuha ang GCD.
+Sa base case, akong gi-check kung ang b equal to zero. Kung zero na ang b, mo-return ang method sa value sa a. Kay ang a na ang GCD.
+Sa recursive case, gigamit nako ang:
+return gcd(b, a % b);
+Pasabot ani, ang value sa b mahimong first number, unya ang remainder sa a % b mahimong second number.
+Padayon ni siya hangtod ang remainder mahimong zero."
+
+problem 3
+Naa tay tulo ka operations:
+Pagkuha sa sum sa tanang elements.
+Pagpangita sa largest element.
+Pag-ihap sa tanang even numbers.
+Una, nag-import ko og Scanner para ang user mismo ang mo-input sa number of elements ug sa mga values sa array.
+Human ana, naghimo ko og tulo ka separate recursive methods."
+Part 1: Array Sum
+"Sa first method, naghimo ko og arraySum() nga gigamit para ma-add ang tanang elements sa array.
+Ang method modawat og array ug index.
+Sa base case, akong gi-check kung ang index equal na sa array length. Kung tinuod, mo-return og zero kay nahurot na ang elements nga i-add.
+Sa recursive case, akong gi-add ang current element sa result sa sunod nga recursive call gamit ang index + 1.
+Padayon ni siya hangtod maabot sa kataposang element sa array."
+
+Sa second method, naghimo ko og findMaximum() para pangitaon ang pinakadako nga number sa array.
+Sa base case, akong gi-check kung ang index naa na sa last position sa array. Kung oo, i-return niya ang last element.
+Sa recursive case, una niyang pangitaon ang maximum sa mga nahibiling elements.
+Human ana, i-compare niya ang current element ug ang maximum nga nakuha gikan sa recursive call.
+Kung mas dako ang current element, mao na ang i-return. Kung mas dako ang maximum, mao pud na ang i-return.
+Pinaagi ani, makuha nato ang pinakadako nga number sa array."
+
+Sa third method, naghimo ko og countEven() para maihap kung pila ang even numbers sulod sa array.
+Sa base case, akong gi-check kung ang index equal na sa array length. Kung oo, mo-return og zero kay nahurot na ang elements nga atong susihon.
+Sa recursive case, gigamit nako ang modulo operator nga % 2.
+Kung ang remainder kay zero, pasabot even number siya, mao nga mag-add og one sa count.
+Kung dili zero ang remainder, dili siya i-count pero mopadayon gihapon sa sunod nga element.
+Padayon ni siya hangtod ma-check ang tanang elements sa array."

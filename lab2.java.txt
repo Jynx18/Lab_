@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class LastName_Problem2 {
+
+    public static int gcd(int a, int b) {
+
+        if (b == 0) {
+            return a;
+        }
+
+        return gcd(b, a % b);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = input.nextInt();
+
+        if (a < 0 || b < 0) {
+            System.out.println("Invalid input.");
+        } else if (a == 0 && b == 0) {
+            System.out.println("GCD is undefined.");
+        } else {
+            System.out.println("GCD: " + gcd(a, b));
+        }
+
+        input.close();
+    }
+}
+
