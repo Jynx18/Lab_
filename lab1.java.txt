@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class LastName_Problem1 {
+public class Main {
 
     public static int sumOfDigits(int number) {
 
